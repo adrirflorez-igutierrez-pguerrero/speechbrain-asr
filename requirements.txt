@@ -1,0 +1,16 @@
+# requirements.txt
+# -----------------------------------------------------------------------------
+# adriana r.f. (@adrmisty:github)
+# iker g.f.
+# paula g.c.
+# may-2026
+
+# [python 3.11+]
+
+torch
+torchaudio
+speechbrain
+huggingface_hub
+transformers
+sentencepiece
+tqdm

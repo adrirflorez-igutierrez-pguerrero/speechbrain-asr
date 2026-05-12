@@ -1,0 +1,30 @@
+# .gitignore
+# -----------------------------------------------------------------------------
+# virtual envs, cache, loaded/trained models
+# -----------------------------------------------------------------------------
+# adriana r.f. (@adrmisty:github)
+# iker g.f.
+# paula g.c.
+# may-2026
+
+# python envs
+__pycache__/
+*.py[cod]
+.env
+venv/
+
+# data
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/models/*
+!data/models/.gitkeep
+data/results/*
+!data/results/.gitkeep
+
+# model checkpoints
+results/
+save/
+*.ckpt
+*.pth
