@@ -11,17 +11,13 @@ import os
 from pathlib import Path
 
 # ----------------------------------------------------------------------- paths
-# absolute
 BASE_DIR = Path(__file__).resolve().parent
-DATA_DIR = BASE_DIR / "data"
+LOCAL_DATA_DIR = BASE_DIR / "workspace" 
 
-# .gitignore
-RAW_DATA_DIR = DATA_DIR / "raw"
-PROCESSED_DATA_DIR = DATA_DIR / "processed"
-MODELS_DIR = DATA_DIR / "models"
-RESULTS_DIR = DATA_DIR / "results"
-for path in [RAW_DATA_DIR / "testrecordings", PROCESSED_DATA_DIR, MODELS_DIR, RESULTS_DIR]:
-    os.makedirs(path, exist_ok=True)
+RAW_DATA_DIR = LOCAL_DATA_DIR / "raw" / "LibriSpeech"
+PROCESSED_DATA_DIR = LOCAL_DATA_DIR / "processed"
+MODELS_DIR = LOCAL_DATA_DIR / "models"
+RESULTS_DIR = LOCAL_DATA_DIR / "results"
 
 # ----------------------------------------------------------------------- params
 HF_SOURCE = "speechbrain/asr-crdnn-rnnlm-librispeech"

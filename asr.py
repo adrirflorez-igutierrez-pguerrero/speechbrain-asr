@@ -13,6 +13,19 @@ import logging
 from speechbrain.inference.ASR import EncoderDecoderASR
 import config
 
+import subprocess
+
+def train_asr(script_dir="ASR", yaml_file="train.yaml", batch_size=2):
+    """Launches the ASR training script (CRDNN + LM + CTC)."""
+    cmd = f"cd {script_dir} && python train.py {yaml_file} --batch_size={batch_size}"
+    logging.info(f"Starting ASR training: {cmd}")
+    
+    try:
+        subprocess.run(cmd, shell=True, check=True)
+        logging.info(">>> ASR training completed.")
+    except subprocess.CalledProcessError as e:
+        logging.error(f"\t> (!) ASR training failed: {e}")
+
 def asr_inference(audio_file_path: str):
     """Loads the pre-trained CRDNN model and transcribes the provided audio."""
     logging.info(f"(Down)Loading weights from {config.HF_SOURCE}...")

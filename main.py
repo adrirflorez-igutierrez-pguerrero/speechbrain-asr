@@ -1,4 +1,4 @@
-# config.py
+# main.py
 # -----------------------------------------------------------------------------
 # asr system entry point (set-up, training and inference from CLI)
 # -----------------------------------------------------------------------------
@@ -11,11 +11,8 @@ import argparse
 import subprocess
 import config
 import logging
-from data import prepare, tokenize
-from inference import asr_inference
-from pathlib import Path
-# from model_lm import train_lm
-# from model_asr import train_asr
+from manifest import prepare, tokenize
+from asr import train_asr, asr_inference
 
 logging.basicConfig(
     level=logging.INFO,
@@ -40,32 +37,32 @@ def main():
     
     args = parser.parse_args()
 
+    # 1. manifests > python main.py --step prepare &> workspace/1_prepare.log
     if args.step == "prepare":
         prepare()
-        
+
+    # 2. tokenizer > python main.py --step tokenize &> workspace/2_tokenize.log
     elif args.step == "tokenize":
         tokenize()
-        
+
+    # 3. language model > python main.py --step lm &> workspace/3_lm.log
     elif args.step == "lm":
         logging.info("Launching Language Model training...")
         _run("LM", "RNNLM.yaml")
         
     elif args.step == "asr":
-        logging.info("Launching Acoustic Model (CRDNN) training...")
-        _run("ASR", "asr.yaml") 
+        train_asr(batch_size=2) 
         
     elif args.step == "inference":
         if args.audio:
-            audio_path = Path(args.audio)
+            asr_inference(args.audio)
         else:
-            # ** fallback: first available audio if none provided **
             wavs = list(config.RAW_DATA_DIR.glob("*.wav")) + list(config.RAW_DATA_DIR.glob("*.flac"))
             if not wavs:
-                logging.error(f"No audio files found in {config.RAW_DATA_DIR}")
+                logging.error(f"\t> (!) No audio files found in {config.RAW_DATA_DIR}")
                 return
-            audio_path = wavs
-            
-        asr_inference(str(audio_path))
+            for wav in wavs:
+                asr_inference(str(wav))
 
 if __name__ == "__main__":
     main()
