@@ -17,7 +17,7 @@ Our project presents a full ASR training and inference lifecycle, handling custo
 
 ### Core Components
 
-1.  **Data preparation**: A batch processing module that reads raw `.wav` recordings and generates the `JSON`/`CSV` DataLoader manifests required by SpeechBrain.
+1.  **Data preparation**: A batch processing module that reads raw `.wav` and `.flac` recordings and generates the `JSON`/`CSV` DataLoader manifests required by SpeechBrain.
 2.  **Training modules**: Independent scripts for training the Tokenizer, Language Model (LM), and ASR acoustic model (from the Aholab server).
 3.  **Inference engine**: A lightweight transcription module that loads audio, processes it through the encoder-decoder architecture, and logs outputs locally.
 4.  **Pre-trained models**: Utilizes the `speechbrain/asr-crdnn-rnnlm-librispeech` HuggingFace repository for immediate out-of-the-box evaluation.
@@ -81,22 +81,21 @@ python main.py --step inference --audio data/raw/testrecordings/example.wav
 ## Project structure
 
 ```text
-speechbrain-asr-practice/
-├── requirements.txt            
-├── README.md                   
-├── config.py                 
-├── main.py                   # CLI entry point
-├── prepare.py                
-├── tokenizer.py              # [from aholab]
-├── model_lm.py               # [from aholab]
-├── model_asr.py              # [from aholab]
-├── inference.py              # asr/eval
-└── data/                     
-    ├── raw/testrecordings/   # input .wav files
-    ├── processed/            # dataloaders
-    ├── models/               # pre-trained HF models
-    └── results/              # output logs
-
+speechbrain-asr/
+├── .gitignore                
+├── README.md                 
+├── requirements.txt          
+├── config.py                 # configuration and path definitions
+├── main.py                   # CLI entry point wrapper
+├── manifest.py               # data preparation (generates json manifests)
+├── asr.py                    # inference and ASR training wrapper
+├── Tokenizer/                # [from aholab] tokenizer scripts and yaml
+├── LM/                       # [from aholab] language model scripts and yaml
+├── ASR/                      # [from aholab] speech recognizer scripts and yaml
+└── workspace/                # [untracked local directory]
+    ├── processed/            # data manifests (train.json, valid.json, test.json)
+    ├── models/               # saved tokenizer models (e.g., 1000_unigram.model)
+    └── results/              # saved LM and ASR checkpoints and logs
 ```
 
 ### Configuration
