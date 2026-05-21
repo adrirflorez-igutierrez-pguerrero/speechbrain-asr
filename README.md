@@ -109,7 +109,7 @@ Configuration is managed natively in `config.py`, which defines isolated, local 
 *Computational Linguist & Software Engineer*
 [GitHub Profile](https://github.com/adrmisty) | [LinkedIn](https://linkedin.com/in/adriana-rodriguez-florez)
 
-**Paula Guerrero Castello**
+**Paula Guerrero Castelló**  [GitHub Profile](https://github.com/guerreropaula) | [pguerrero005@ikasle.ehu.eus](mailto:pguerrero005@ikasle.ehu.eus) 
 
 **Íker Gutiérrez Fandiño**
 
