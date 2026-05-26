@@ -105,11 +105,11 @@ Configuration is managed natively in `config.py`, which defines isolated, local 
 ## Authors
 
 **Adriana R. Flórez**<br>
-*Computational Linguist & Software Engineer*<br>
+*Computational linguist & software engineer*<br>
 [GitHub Profile](https://github.com/adrmisty) | [LinkedIn](https://linkedin.com/in/adriana-rodriguez-florez)
 
 **Iker Gutierrez Fandiño**<br>
-*Computational Linguist*<br>
+*Computational linguist*<br>
 [GitHub Profile](https://github.com/iker-gutierrez) | [LinkedIn](https://www.linkedin.com/in/iker-gutierrez-fandino)
 
 **Paula Guerrero Castelló**<br> 
