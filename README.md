@@ -110,7 +110,9 @@ Configuration is managed natively in `config.py`, which defines isolated, local 
 
 **Paula Guerrero Castelló**  [GitHub Profile](https://github.com/guerreropaula) | [pguerrero005@ikasle.ehu.eus](mailto:pguerrero005@ikasle.ehu.eus) 
 
-**Íker Gutiérrez Fandiño**
+**Iker Gutierrez Fandiño**
+*Computational Linguist*
+[GitHub Profile](https://github.com/iker-gutierrez) | [LinkedIn](https://www.linkedin.com/in/iker-gutierrez-fandino)
 
 ---
 
