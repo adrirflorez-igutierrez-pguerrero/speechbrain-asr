@@ -114,7 +114,7 @@ Configuration is managed natively in `config.py`, which defines isolated, local 
 
 **Paula Guerrero Castelló**<br> 
 *Computational linguist & translator ES/FR/EN/CA/ZH*<br>
-[GitHub Profile](https://github.com/guerreropaula) | [pguerrero005@ikasle.ehu.eus](mailto:pguerrero005@ikasle.ehu.eus) 
+[GitHub Profile](https://github.com/guerreropaula) | [LinkedIn](https://www.linkedin.com/in/paula-guerrero-castelló)
 
 ---
 
