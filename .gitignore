@@ -30,3 +30,8 @@ results/
 save/
 *.ckpt
 *.pth
+# downloaded datasets and generated comparison logs
+ASR/LibriSpeech/
+ASR/*.tar.gz
+LM/*.log
+data/raw/testrecordings/*.wav
