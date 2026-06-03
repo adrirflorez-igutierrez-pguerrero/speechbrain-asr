@@ -86,8 +86,9 @@ python main.py --step inference --audio data/raw/testrecordings/example.wav
 ```text
 speechbrain-asr/
 ├── .gitignore                
-├── README.md                 
-├── requirements.txt          
+├── README.md  
+├── requirements.txt     
+├── REPORT.pdf                # lab report describing methodology, experiments, and results    
 ├── config.py                 # configuration and path definitions
 ├── main.py                   # CLI entry point wrapper
 ├── manifest.py               # data preparation (generates json manifests)
