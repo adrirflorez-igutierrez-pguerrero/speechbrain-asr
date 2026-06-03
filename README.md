@@ -36,7 +36,7 @@ Our project presents a full ASR training and inference lifecycle, handling custo
 
 1.  Clone the repository:
 ```bash
-git clone git@github.com:adrmisty/speechbrain-asr-practice.git
+git clone https://github.com/adrirflorez-igutierrez-pguerrero/speechbrain-asr.git
 cd speechbrain-asr
 ```
 
