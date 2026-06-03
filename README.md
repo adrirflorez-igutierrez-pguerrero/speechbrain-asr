@@ -1,6 +1,6 @@
 # Building an ASR system with SpeechBrain
 
-[![Poster](https://img.shields.io/badge/Poster-PDF-red)](REPORT.pdf)
+[![Report](https://img.shields.io/badge/Poster-PDF-red)](REPORT.pdf)
 [![Models](https://img.shields.io/badge/HuggingFace-Models-yellow)](https://huggingface.co/collections/adrirflorez-igutierrez-pguerrero/speechbrain-asr)
 
 An experimental pipeline designed to implement Automatic Speech Recognition (ASR) capabilities using **SpeechBrain** from scratch for our Speech Technologies course. This project covers data preparation, language model (LM) integration, and acoustic modeling. Tested using pre-trained **HuggingFace** models (`asr-crdnn-rnnlm-librispeech`) for high-accuracy local inference.
