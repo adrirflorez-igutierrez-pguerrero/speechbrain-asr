@@ -83,6 +83,7 @@ python main.py --step inference --audio testrecordings/sentence1.wav
 
 ## Project structure
 
+```text
 speechbrain-asr/
 ├── REPORT.pdf                # lab report describing methodology, experiments, and results
 ├── README.md                 # project overview and usage notes
@@ -115,6 +116,7 @@ speechbrain-asr/
     ├── sentence3.wav
     ├── sentence4.wav
     └── sentence5.wav
+```
 
 Generated experiment files such as processed manifests, model checkpoints, logs, and
 inference outputs are kept in the local `workspace/` directory on the Aholab server and
