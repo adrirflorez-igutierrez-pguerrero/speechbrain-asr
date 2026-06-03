@@ -83,41 +83,41 @@ python main.py --step inference --audio testrecordings/sentence1.wav
 
 ## Project structure
 
-    speechbrain-asr/
-    +-- REPORT.pdf                # lab report describing methodology, experiments, and results
-    +-- README.md                 # project overview and usage notes
-    +-- requirements.txt          # Python dependencies
-    +-- config.py                 # configuration and path definitions
-    +-- main.py                   # CLI entry point wrapper
-    +-- manifest.py               # data preparation helpers for JSON manifests
-    +-- asr.py                    # inference and ASR training wrapper
-    +-- ASR/                      # SpeechBrain ASR training and inference recipe files
-    |   +-- train.py
-    |   +-- train.yaml
-    |   +-- inference.yaml
-    |   +-- transcribe_file.py
-    |   +-- mini_librispeech_prepare.py
-    +-- LM/                       # RNN language model recipes and configurations
-    |   +-- train.py
-    |   +-- custom_model.py
-    |   +-- RNNLM.yaml
-    |   +-- RNNLM_bpe.yaml
-    |   +-- RNNLM_char.yaml
-    |   +-- extra_requirements.txt
-    +-- Tokenizer/                # SentencePiece tokenizer training and testing scripts
-    |   +-- train.py
-    |   +-- tokenizer.yaml
-    |   +-- test_tokenizer.py
-    |   +-- mini_librispeech_prepare.py
-    +-- testrecordings/           # five custom WAV recordings used for inference tests
-        +-- sentence1.wav
-        +-- sentence2.wav
-        +-- sentence3.wav
-        +-- sentence4.wav
-        +-- sentence5.wav
+speechbrain-asr/
+├── REPORT.pdf                # lab report describing methodology, experiments, and results
+├── README.md                 # project overview and usage notes
+├── requirements.txt          # Python dependencies
+├── config.py                 # configuration and path definitions
+├── main.py                   # CLI entry point wrapper
+├── manifest.py               # data preparation helpers for JSON manifests
+├── asr.py                    # inference and ASR training wrapper
+├── ASR/                      # SpeechBrain ASR training and inference recipe files
+│   ├── train.py
+│   ├── train.yaml
+│   ├── inference.yaml
+│   ├── transcribe_file.py
+│   └── mini_librispeech_prepare.py
+├── LM/                       # RNN language model recipes and configurations
+│   ├── train.py
+│   ├── custom_model.py
+│   ├── RNNLM.yaml
+│   ├── RNNLM_bpe.yaml
+│   ├── RNNLM_char.yaml
+│   └── extra_requirements.txt
+├── Tokenizer/                # SentencePiece tokenizer training and testing scripts
+│   ├── train.py
+│   ├── tokenizer.yaml
+│   ├── test_tokenizer.py
+│   └── mini_librispeech_prepare.py
+└── testrecordings/           # five custom WAV recordings used for inference tests
+    ├── sentence1.wav
+    ├── sentence2.wav
+    ├── sentence3.wav
+    ├── sentence4.wav
+    └── sentence5.wav
 
 Generated experiment files such as processed manifests, model checkpoints, logs, and
-inference outputs are kept in the local workspace/ directory on the Aholab server and
+inference outputs are kept in the local `workspace/` directory on the Aholab server and
 are intentionally not included in the GitHub repository.
 
 ### Configuration
